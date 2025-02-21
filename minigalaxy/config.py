@@ -162,7 +162,7 @@ class Config:
 
     @property
     def current_downloads(self) -> List[int]:
-        return self.__config.get("current_downloads", [])
+        return self.__config.get("current_downloads", [])[::-1]
 
     @current_downloads.setter
     def current_downloads(self, new_value: List[int]) -> None:
